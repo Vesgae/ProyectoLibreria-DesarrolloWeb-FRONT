@@ -3,12 +3,11 @@
   <div class="row">
     <div *ngFor="let book of books" class="col-md-3 mb-4">
       <div class="card">
-        <img [src]="book.portada" class="card-img-top">
+        <img src="book.cover_url" class="card-img-top">
         <div class="card-body">
-          <h5 class="card_title">{{book.name}}</h5>
-          <p>
-            <!-- <a (href)="" class="badge text-bg-info"></a> -->
-          </p>
+          <h5 class="card_title">{{book.title}}</h5>
+
+          <button class="btn btn-primary" (click)="filtrarPorEditorial()">{{book.editorial}}</button>
           <p class="card-text" >{{book.description}}</p>
         </div>
       </div>
