@@ -18,7 +18,7 @@ export class AuthService{
     let newAuthUser = new UserLogin(email, password);
     const headers = { 'content-type': 'application/json'};
     const body=JSON.stringify(newAuthUser);
-    let obs: Observable<any> = this.http.post("http://localhost:8080/users/login", body, {'headers':headers});
+    let obs: Observable<any> = this.http.post("http://localhost:8082/login", body, {'headers':headers});
     obs.forEach(value => {
       console.log(value.token);
       this.setToken(value.token);

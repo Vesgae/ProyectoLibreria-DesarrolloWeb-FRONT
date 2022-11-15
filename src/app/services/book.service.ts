@@ -10,6 +10,6 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
   searchAllBooks(): Observable<Book[]>{
-    return this.http.get<Book[]>("http://localhost:8082/getbooks");
+    return this.http.get<Book[]>("http://localhost:8083/getbooks");
   }
 }

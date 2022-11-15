@@ -1,9 +1,9 @@
 export interface Book{
   id: number ;
-  name: String;
+  title: String;
   editorial:String;
+  cover_url:String;
   description:String;
-  portada:String;
-  fecha_edicion:number;
-  cantidad:number;
+  publication_year:number;
+  volume:number;
 }
