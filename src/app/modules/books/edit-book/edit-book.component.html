@@ -1,1 +1,56 @@
-<p>edit-book works!</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12 mt-5">
+      <h1>Editar Libro</h1>
+      <form class="custom-form" [formGroup]="crearlibroForm" (ngSubmit)="onSubmit()">
+        <input
+        type="text"
+        formControlName="title"
+        name="title"
+        placeholder="Digite titulo del libro:"
+        required="required"
+        />
+        <input
+        type="text"
+        formControlName="editorial"
+        name="editorial"
+        placeholder="Digite editorial:"
+        required="required"
+        />
+        <input
+        type="text"
+        formControlName="cover_url"
+        name="cover_url"
+        placeholder="Digite portada:"
+        required="required"
+        />
+        <input
+        type="text"
+        formControlName="description"
+        name="description"
+        placeholder="Digite descripcion: "
+        required="required"
+        />
+        <input
+        type="text"
+        formControlName="publication_year"
+        name="publication_year"
+        placeholder="Digite año de publicación: "
+        required="required"
+        />
+        <input
+        type="text"
+        formControlName="volume"
+        name="volume"
+        placeholder="Digite cantidad a añadir: "
+        required="required"
+        />
+        <button type="submit">Crear</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>

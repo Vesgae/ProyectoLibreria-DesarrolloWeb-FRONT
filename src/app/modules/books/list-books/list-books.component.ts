@@ -21,6 +21,5 @@ export class ListBooksComponent implements OnInit {
   }
 
   filtrarPorEditorial():void{
-
   }
 }
