@@ -1,0 +1,47 @@
+<div class="usuarios">
+    <h1 style="text-align:center">Usuarios</h1>
+    <button type="button" class="btn btn-primary" style="margin-bottom:5px">Nuevo</button>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Cumpleaños</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users" style="vertical-align:text-top">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.birthday}}</td>
+      <td>{{user.role}}</td>
+      <td><button type="button" class="btn btn-primary">Inactivar</button></td>
+    </tr>
+  
+    </tbody>
+  </table>
+    <nav aria-label="...">
+      <ul class="pagination  justify-content-center">
+        <li class="page-item disabled">
+          <span class="page-link">Previous</span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active">
+        <span class="page-link">
+          2
+          <span class="sr-only"></span>
+        </span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  

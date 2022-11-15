@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LIBRERIA NACIONAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Inicio</a>
+        </li>
+        <li class="nav-item dropdown" [hidden]="logOutBt">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Gestionar Libros
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/books">Listar Libros</a></li>
+            <li><a class="dropdown-item" routerLink="/books/add-book">Agregar Libro</a></li>
+            <li><a class="dropdown-item" routerLink="/books/delete-book">Eliminar Libro</a></li>
+            <li><a class="dropdown-item" routerLink="/books/modify-book">Editar Libro</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" [hidden]="logOutBt">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Gestionar Usuarios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/users">Listar Usuarios</a></li>
+            <li><a class="dropdown-item" routerLink="/users/add-user">Agregar Usuario</a></li>
+            <li><a class="dropdown-item" routerLink="/users/modify-user">Elimina Usuario</a></li>
+            <li><a class="dropdown-item" routerLink="/users/delete-user">Editar Usuario</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/login" role="button" [hidden]="loginBt" >Iniciar Sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" role="button" [hidden]="logOutBt" routerLink="" (click)="logOut()">Cerrar Sesión</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2 " type="search" placeholder="Buscar titulo por nombre o editorial" aria-label="Search" style="width: 300px;">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>

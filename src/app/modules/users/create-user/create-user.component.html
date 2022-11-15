@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-12 mt-5">
+        <h1>Crear Usuario</h1>
+        <form class="custom-form" [formGroup]="crearusuarioForm" (ngSubmit)="onSubmit()">
+          <input
+          type="text"
+          formControlName="name"
+          name="name"
+          placeholder="Digite nombre:"
+          required="required"
+          />
+          <input
+          type="text"
+          formControlName="lastname"
+          name="lastname"
+          placeholder="Digite apellido:"
+          required="required"
+          />
+          <input
+          type="text"
+          formControlName="birthday"
+          name="name"
+          placeholder="Digite fecha de cumpleaños dd/mm/yy:"
+          required="required"
+          />
+          <input
+          type="text"
+          formControlName="role"
+          name="name"
+          placeholder="Digite rol:"
+          required="required"
+          />
+          <button type="submit">Crear</button>
+  
+        </form>
+  
+      </div>
+    </div>
+  
+  </div>
