@@ -1,8 +1,6 @@
 export interface User{
   id: number;
-  name: String;
-  lastname: String;
+  name: string;
+  email: string;
   birthday: Date;
-  role: String;
-  activar:boolean;
 }

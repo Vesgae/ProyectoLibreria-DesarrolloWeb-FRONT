@@ -1,1 +1,27 @@
-<p>delete-user works!</p>
+<div class="usuarios">
+    <h1 style="text-align:center">Usuarios</h1>
+    <button type="button" class="btn btn-primary" style="margin-bottom:5px">Nuevo</button>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Cumpleaños</th>
+      <th scope="col">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users" style="vertical-align:text-top">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.birthday}}</td>
+      <td><button class="btn btn-primary" (click)="deleteUser(user.email)">Eliminar Libro</button></td>
+    </tr>
+  
+    </tbody>
+  </table>
+</div>
+  
